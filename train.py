@@ -29,10 +29,11 @@ DEFAULT_EOS_TOKEN = "</s>"
 DEFAULT_BOS_TOKEN = "<s>"
 DEFAULT_UNK_TOKEN = "<unk>"
 PROMPT_DICT = {
-    "prompt_input": (
-        "Below is an instruction that describes a task, paired with an input that provides further context. "
-        "Write a response that appropriately completes the request.\n\n"
-        "### Instruction:\n{instruction}\n\n### Input:\n{input}\n\n### Response:"
+    "prompt_input": ("We are performing enhancement on coding problem statements to make them clearer to students. Specifically we want to enhance each statement with the various steps and functionalities required for the problem by simply restating and expanding upon text pulled from the original statement. You should not mention any explicit function names, only what these functions should do. The post enhancement should be the pre enhancement plus some new text. Here are three (pre enhancement, post enhancement examples): "
+ " (\"Create list `instancelist` containing 29 objects of type MyClass\", \"Create list `instancelist` containing 29 objects of type MyClass. This requires creating list ` instancelist `, creating 29 objects of type MyClass, and adding them to the list.\")"
+ " (\"Taking the results of a bash command \"awk '{print $10, $11}' test.txt > test2.txt\"\", \"Taking the results of a bash command \"awk '{print $10, $11}' test.txt > test2.txt\". This requires executing bash command  \"awk '{print $10, $11}' test.txt > test2.txt\" and storing the results.\")"
+ " (\"Save matplotlib graph to image file `filename.png` at a resolution of `300 dpi`\", \"Save matplotlib graph to image file `filename.png` at a resolution of `300 dpi`. This requires saving matplotlib graph to image file `filename.png` and specifying the resolution of `300 dpi`\")"
+ "Now provide post-enhancements for the following in a bullet list: "
     ),
     "prompt_no_input": (
         "Below is an instruction that describes a task. "
